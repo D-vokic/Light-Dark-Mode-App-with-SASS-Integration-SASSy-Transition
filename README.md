@@ -3,7 +3,7 @@
 ## Elevating Style and Efficiency: Unleashing the Power of SASS for a Seamless Light-Dark Mode Experience in our CSS Legacy - Light-Dark-Mode-App!
 
 ![Light/Dark Mode App Preview](screenshot.png)
-You can check it out [here]( ).
+You can check it out [here](https://d-vokic.github.io/SASSy-Transition-Light-Dark-Mode-App-Evolves-with-SASS-Integration/#home ).
 
 ## Author
 
@@ -35,17 +35,17 @@ The project facilitates dynamic theme switching between dark and light modes on 
 
 ### Usage
 To use this project on GitHub, follow these steps:
-1. **Clone the Repository:** Visit the GitHub repository hosting the project. Clone the repository to your local machine using Git. Use the following command in your terminal:
- ```git clone <repository_url>```
+1. **Clone the Repository:** Visit the GitHub repository hosting the project. Clone the repository to your local machine using Git. <p>Use the following command in your terminal:<br>
+ ```git clone https://github.com/D-vokic/SASSy-Transition-Light-Dark-Mode-App-Evolves-with-SASS-Integration```</p>
 2. **Set Up the Project:** Navigate to the project directory on your local machine. Ensure you have a web server environment set up, such as Apache or Nginx, or use a local development server like Live Server for VS Code.
 3. **Include HTML, SCSS, and JavaScript Files:** Make sure you have the necessary HTML, SCSS, and JavaScript files in your project directory. These files should contain the code for the dynamic theme switching functionality, including the toggle switch, theme styles, and JavaScript functions.
 4. **Customize and Extend:** Customize the project according to your requirements. You can modify the HTML structure, update CSS styles to match your design preferences, and extend JavaScript functionality as needed.
-5. **Commit Changes:** Once you've made modifications or customizations to the project, commit your changes using Git. Use the following commands:
-```git add .```
-```git commit -m "Description of changes"```
-6. Push Changes to GitHub: Push your changes to the GitHub repository using the following command:
-```git push origin main```
-7. Publish on GitHub Pages (Optional): If you want to showcase your project online, you can publish it using GitHub Pages. Simply go to your repository's settings on GitHub, navigate to the "Pages" section, and choose the branch you want to publish (usually main). Once enabled, your project will be accessible via a GitHub Pages URL.
+5. **Commit Changes:** <p>Once you've made modifications or customizations to the project, commit your changes using Git. Use the following commands:<br>
+```git add .```<br>
+```git commit -m "Description of changes"```</p>
+1. Push Changes to GitHub: <p>Push your changes to the GitHub repository using the following command:<br>
+```git push origin main```</p>
+6. Publish on GitHub Pages (Optional): If you want to showcase your project online, you can publish it using GitHub Pages. Simply go to your repository's settings on GitHub, navigate to the "Pages" section, and choose the branch you want to publish (usually main). Once enabled, your project will be accessible via a GitHub Pages URL.
 Troubleshooting:
 1. **Common Issues and Solutions:**
 > If you encounter any issues during installation or usage, refer to the troubleshooting section in the README.md file of the GitHub repository.
