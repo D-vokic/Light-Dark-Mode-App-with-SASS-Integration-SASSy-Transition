@@ -3,7 +3,7 @@
 ## Elevating Style and Efficiency: Unleashing the Power of SASS for a Seamless Light-Dark Mode Experience in our CSS Legacy - Light-Dark-Mode-App!
 
 ![Light/Dark Mode App Preview](screenshot.png)
-You can check it out [here](https://d-vokic.github.io/SASSy-Transition-Light-Dark-Mode-App-Evolves-with-SASS-Integration/#home ).
+You can check it out [here](https://d-vokic.github.io/Light-Dark-Mode-App-with-SASS-Integration-SASSy-Transition/ ).
 
 ## Author
 
