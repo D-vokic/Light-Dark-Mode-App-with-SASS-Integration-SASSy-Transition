@@ -1,17 +1,9 @@
 /**
- * @license MIT
- * @version 1.0
- * @since 2024-03-01
- *
- * Dynamic Theme Switching - Dark/Light Mode Project
+ * Dynamic Theme Switching - Dark/Light Mode Project written in SCSS and JavaScript.
  * Description: JavaScript file for the project. This project implements functionality for dynamically switching between Light and Dark modes on a web page.
  * Using JavaScript and SCSS, users can easily toggle between different themes according to their preferences.
  * It includes support for local storage using localStorage, allowing the chosen theme to be remembered even after refreshing the page.
- * @summary Seamlessly switch between Dark and Light modes for enhanced user experience.
- *
- * @author [Душко Вокић]
- * @class [Frontend Developer]
- * @global [document, localStorage]
+ * Author: Duško Vokić
  */
 
 /**
