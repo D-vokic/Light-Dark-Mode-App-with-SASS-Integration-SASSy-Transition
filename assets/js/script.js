@@ -104,31 +104,39 @@ function imageMode(color) {
 }
 
 /**
- * Dark Mode Styles
- * Changes the styles of various elements to fit the dark mode theme.
+ * Toggles between dark and light mode for the webpage.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
  */
-function darkMode() {
-  nav.style.backgroundColor = "rgb(0 0 0 / 50%)";
-  textBox.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  toggleIcon.children[0].textContent = "Dark Mode";
-  toggleIcon.children[1].classList.replace("fa-sun", "fa-moon");
-  imageMode("dark");
-  linkedin.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  github.style.backgroundColor = "rgb(255 255 255 / 50%)";
-}
+function toggleDarkLightMode(isdark) {
+  // Set background color of navigation bar based on the mode
+  nav.style.backgroundColor = isdark
+    ? "rgb(0 0 0 / 50%)" // Dark mode background color
+    : "rgb(255 255 255 / 50%)"; // Light mode background color
 
-/**
- * Light Mode Styles
- * Changes the styles of various elements to fit the light mode theme.
- */
-function lightMode() {
-  nav.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  textBox.style.backgroundColor = "rgb(0 0 0 / 50%)";
-  toggleIcon.children[0].textContent = "Light Mode";
-  toggleIcon.children[1].classList.replace("fa-moon", "fa-sun");
-  imageMode("light");
-  linkedin.style.backgroundColor = "rgb(255 255 255 / 50%)";
-  github.style.backgroundColor = "rgb(255 255 255 / 50%)";
+  // Set background color of text box based on the mode
+  textBox.style.backgroundColor = isdark
+    ? "rgb(255 255 255 / 50%)" // Dark mode background color
+    : "rgb(0 0 0 / 50%)"; // Light mode background color
+
+  // Change toggle icon text based on the mode
+  toggleIcon.children[0].textContent = isdark ? "Dark Mode" : "Light Mode";
+
+  // Change toggle icon based on the mode
+  isdark
+    ? toggleIcon.children[1].classList.replace("fa-sun", "fa-moon") // Dark mode icon
+    : toggleIcon.children[1].classList.replace("fa-moon", "fa-sun"); // Light mode icon
+
+  // Change image mode based on the mode
+  isdark ? imageMode("dark") : imageMode("light");
+
+  // Set background color of linkedin and github icons based on the mode
+  linkedin.style.backgroundColor = isdark
+    ? "rgb(255 255 255 / 50%)" // Dark mode background color
+    : "rgb(255 255 255 / 50%)"; // Light mode background color
+
+  github.style.backgroundColor = isdark
+    ? "rgb(255 255 255 / 50%)" // Dark mode background color
+    : "rgb(255 255 255 / 50%)"; // Light mode background color
 }
 
 /**
@@ -139,11 +147,11 @@ function switchTheme(event) {
   if (event.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
     localStorage.setItem("theme", "dark");
-    darkMode();
+    toggleDarkLightMode(true);
   } else {
     document.documentElement.setAttribute("data-theme", "light");
     localStorage.setItem("theme", "light");
-    lightMode();
+    toggleDarkLightMode(false);
   }
 }
 
@@ -162,6 +170,6 @@ if (currentTheme) {
 
   if (currentTheme === "dark") {
     toggleSwitch.checked = true;
-    darkMode();
+    toggleDarkLightMode(true);
   }
 }
