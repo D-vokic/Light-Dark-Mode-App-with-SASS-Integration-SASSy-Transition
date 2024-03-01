@@ -69,6 +69,39 @@ const linkedin = document.getElementById("linkedin");
 const github = document.getElementById("github");
 
 /**
+ * Addresses the issue with smooth scrolling on the body element by using window.scrollTo instead.
+ * Smoothly scrolls to the target element when a link is clicked.
+ * @param {Event} e - The click event.
+ */
+
+// Select all links within the document
+const links = document.querySelectorAll("a");
+
+// Iterate through all links and add event listener
+links.forEach((link) => {
+  link.addEventListener("click", smoothScroll);
+});
+
+/**
+ * Smoothly scrolls to the target element when a link is clicked.
+ * @param {Event} e - The click event.
+ */
+function smoothScroll(e) {
+  // Prevent the default behavior of the link
+  e.preventDefault();
+
+  // Get the target destination to scroll to
+  const targetId = this.getAttribute("href");
+  const targetPosition = document.querySelector(targetId).offsetTop;
+
+  // Use the window.scrollTo method for smooth scrolling
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth",
+  });
+}
+
+/**
  * Dark or Light Images
  * @param {string} color - Color theme for the images.
  */
