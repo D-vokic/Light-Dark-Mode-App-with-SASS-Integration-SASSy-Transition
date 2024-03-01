@@ -1,0 +1,73 @@
+@use "../components/" as *;
+
+.contact {
+    & h1 {
+        @media screen and (max-width: 800px) {
+            font-size: 4.5rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 4rem;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 3.5rem;
+        }
+    }
+
+    .social-icons {
+        @include flex(center, center, 50px);
+        flex-wrap: wrap;
+        font-weight: bold;
+        text-align: center;
+
+        .fab {
+            font-size: 100px;
+            margin-right: 50px;
+            cursor: pointer;
+            color: var(--primary-color);
+
+            @media screen and (max-width: 1000px) {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 80px;
+            }
+
+            @media screen and (max-width: 576px) {
+                font-size: 60px;
+
+            }
+
+            &:active {
+                transform: translateY(4px);
+            }
+        }
+
+        .fa-github,
+        .fa-codepen,
+        .fa-linkedin-in {
+            flex-basis: 25%;
+
+            &:hover {
+                color: var(--background-alt);
+            }
+        }
+
+        .fa-medium,
+        .fa-instagram,
+        .fa-youtube {
+            flex-basis: 25%;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        &:hover {
+            text-shadow: 35px -30px 0px rgba(255, 92, 92, 0.48);
+            transition: all 0.3s ease;
+        }
+    }
+}

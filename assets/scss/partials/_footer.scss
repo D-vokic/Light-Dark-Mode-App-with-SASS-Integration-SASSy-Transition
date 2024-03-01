@@ -1,0 +1,52 @@
+@use "../components/" as *;
+
+footer {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+
+    p {
+        margin-bottom: 10px;
+        font-size: 14px;
+
+        a {
+            color: #333;
+            text-decoration: none;
+            color: var(--box-shadow);
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .footer-icons {
+        margin-top: 10px;
+
+        a {
+            display: inline-block;
+            margin-right: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .fab {
+            color: var(--box-shadow);
+            font-size: 30px;
+        }
+
+        .fa {
+            color: var(--box-shadow);
+            font-size: 70px;
+        }
+    }
+}

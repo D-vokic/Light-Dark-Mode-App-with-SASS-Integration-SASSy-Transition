@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+@mixin flex($justify: center, $align: center, $gap: 0px) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
