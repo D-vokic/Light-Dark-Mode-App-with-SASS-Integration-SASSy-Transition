@@ -482,13 +482,5 @@ footer .footer-icons a img {
 footer .footer-icons a img:hover {
   transform: scale(1.2);
 }
-footer .footer-icons .fab {
-  color: var(--box-shadow);
-  font-size: 30px;
-}
-footer .footer-icons .fa {
-  color: var(--box-shadow);
-  font-size: 70px;
-}
 
 /*# sourceMappingURL=style.css.map */
