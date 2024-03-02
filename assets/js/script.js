@@ -104,39 +104,84 @@ function imageMode(color) {
 }
 
 /**
+ * Sets the background color of the navigation bar based on the mode.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
+ */
+function setNavbarBackgroundColor(isdark) {
+  nav.style.backgroundColor = isdark
+    ? "rgb(0 0 0 / 50%)" // Dark mode background color
+    : "rgb(255 255 255 / 50%)"; // Light mode background color
+}
+
+/**
+ * Sets the background color of the text box based on the mode.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
+ */
+function setTextBoxBackgroundColor(isdark) {
+  textBox.style.backgroundColor = isdark
+    ? "rgb(255 255 255 / 50%)" // Dark mode background color
+    : "rgb(0 0 0 / 50%)"; // Light mode background color
+}
+
+/**
+ * Sets the text content of the toggle icon based on the mode.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
+ */
+function setToggleIconText(isdark) {
+  toggleIcon.children[0].textContent = isdark ? "Dark Mode" : "Light Mode";
+}
+
+/**
+ * Sets the toggle icon based on the mode.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
+ */
+function setToggleIcon(isdark) {
+  if (isdark) {
+    toggleIcon.children[1].classList.replace("fa-sun", "fa-moon"); // Dark mode icon
+  } else {
+    toggleIcon.children[1].classList.replace("fa-moon", "fa-sun"); // Light mode icon
+  }
+}
+
+/**
+ * Changes the image mode based on the mode.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
+ */
+function changeImageMode(isdark) {
+  isdark ? imageMode("dark") : imageMode("light");
+}
+
+/**
+ * Sets the background color of LinkedIn and GitHub icons based on the mode.
+ * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
+ */
+function setSocialIconsBackgroundColor(isdark) {
+  linkedin.style.backgroundColor = isdark ? "rgb(255 255 255 / 50%)" : "";
+  github.style.backgroundColor = isdark ? "rgb(255 255 255 / 50%)" : "";
+}
+
+/**
  * Toggles between dark and light mode for the webpage.
  * @param {boolean} isdark - Indicates whether the dark mode is being toggled on or off.
  */
 function toggleDarkLightMode(isdark) {
   // Set background color of navigation bar based on the mode
-  nav.style.backgroundColor = isdark
-    ? "rgb(0 0 0 / 50%)" // Dark mode background color
-    : "rgb(255 255 255 / 50%)"; // Light mode background color
+  setNavbarBackgroundColor(isdark);
 
   // Set background color of text box based on the mode
-  textBox.style.backgroundColor = isdark
-    ? "rgb(255 255 255 / 50%)" // Dark mode background color
-    : "rgb(0 0 0 / 50%)"; // Light mode background color
+  setTextBoxBackgroundColor(isdark);
 
   // Change toggle icon text based on the mode
-  toggleIcon.children[0].textContent = isdark ? "Dark Mode" : "Light Mode";
+  setToggleIconText(isdark);
 
   // Change toggle icon based on the mode
-  isdark
-    ? toggleIcon.children[1].classList.replace("fa-sun", "fa-moon") // Dark mode icon
-    : toggleIcon.children[1].classList.replace("fa-moon", "fa-sun"); // Light mode icon
+  setToggleIcon(isdark);
 
   // Change image mode based on the mode
-  isdark ? imageMode("dark") : imageMode("light");
+  changeImageMode(isdark);
 
   // Set background color of linkedin and github icons based on the mode
-  linkedin.style.backgroundColor = isdark
-    ? "rgb(255 255 255 / 50%)" // Dark mode background color
-    : "rgb(255 255 255 / 50%)"; // Light mode background color
-
-  github.style.backgroundColor = isdark
-    ? "rgb(255 255 255 / 50%)" // Dark mode background color
-    : "rgb(255 255 255 / 50%)"; // Light mode background color
+  setSocialIconsBackgroundColor(isdark);
 }
 
 /**
